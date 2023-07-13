@@ -41,3 +41,8 @@ import할 때는 확장자를 생략가능
 # 크롬 브라우저에 설치하는 개발 도구 
 react development tools
 각종 컴포넌트, state, props, context 확인할 수 있는 도구 
+
+# react event handler 
+1. <button onMouseOver={ 파라미터가 없는 함수명 }>마우스오버</button>
+2. <button onMouseOver={ ()=>{함수(파라미터)} }>마우스오버</button>
+2. <button onMouseOver={ ()=>함수(파라미터) }>마우스오버</button>
