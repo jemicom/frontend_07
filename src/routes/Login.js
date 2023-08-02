@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import './Login.css'
 import { BsFillEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
+// 기본
 const Login = ({user, setUser}) => {
   const [ pwShow, setPwShow ] = useState(false);
   const useridRef = useRef();

@@ -24,6 +24,8 @@ import {
 import { format  } from 'date-fns';
 import PostLayout from './layouts/PostLayout'
 
+import Charts from './charts/Charts';
+
 const App = () => {
   const { user }= useContext(AuthContext);
   
@@ -36,14 +38,18 @@ const App = () => {
           <Route path="/main"  element={<Main />} />
 
           <Route path="/coins"  element={<Coins />} />
-          <Route path="/coins/:id"  element={<CoinDetail />} />
+          <Route path="/coins/:symbol"  element={<CoinDetail />} />
 
           <Route path='/posts'  relative="path"  element={ <PostLayout   /> } >
               <Route index  element={ <Posts   />} />
               <Route path=":id"  element={ <PostDetail  />} />
               <Route path="newpost"  element={ <NewPost  />} />
+              <Route path="charts"  element={<Charts />} />
+              {/* http://localhost:3000/posts/charts */}
           </Route>
           {/* PostLayout end  */}
+
+          <Route path="/charts"  element={<Charts />} />
 
           <Route path="/login"  element={<Login />} />
           <Route path="/*"  element={<NotFound />} />
