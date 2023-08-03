@@ -25,6 +25,7 @@ import { format  } from 'date-fns';
 import PostLayout from './layouts/PostLayout'
 
 import Charts from './charts/Charts';
+import Motions from './motions/Motions'
 
 const App = () => {
   const { user }= useContext(AuthContext);
@@ -50,6 +51,7 @@ const App = () => {
           {/* PostLayout end  */}
 
           <Route path="/charts"  element={<Charts />} />
+          <Route path="/motions"  element={<Motions />} />
 
           <Route path="/login"  element={<Login />} />
           <Route path="/*"  element={<NotFound />} />
