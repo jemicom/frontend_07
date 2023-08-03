@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './CoinDetail.css'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+
 import {
   LineChart,
   Line,
@@ -16,19 +17,21 @@ const API= `https://api.coinpaprika.com/v1/tickers`
 
 const CoinDetail = () => {
   const { symbol } = useParams();
-  const [coin, setCoin] = useState({});
+  // const [coin, setCoin] = useState({});
   const [chart, setChart] = useState();
+  const navigate = useNavigate();
 
   const axiosHandle = async ()=>{
     const datas = await axios.get(API);
     console.log(datas.data.length)
-    const find = datas.data.find(item=>item.symbol === symbol)
-    setCoin(find)
+    const find = datas.data.find(item=>item.symbol === symbol);
 
-    console.log("coin ", coin)
+    // setCoin(find)
+    // console.log("coin ", coin)
+    setChart(chartData(find));
   }
 
-  const chartData = ()=>{
+  const chartData = (coin)=>{
     const data = [
       {
         name: "1h",
@@ -52,16 +55,17 @@ const CoinDetail = () => {
   }
   useEffect(()=>{
       axiosHandle();
-      setChart(chartData());
+      //  
   }, [])
 
   return (
     <div>
-
+{/* 모바일이라면 gotoback */}
         <h1>CoinDetail  {symbol}</h1>
+
         <LineChart
-            width={1000}
-            height={600}
+            width={500}
+            height={300}
             data={chart}
             margin={{
               top: 5,
@@ -85,9 +89,12 @@ const CoinDetail = () => {
             />
             <Line  dataKey="value" stroke="#82ca9d" /> 
         </LineChart>
-    
+
+        {/* <button onClick={()=>navigate('/coins')}>목록</button>     */}
+        <Link to='/coins'>목록</Link>    
     </div>
     // chart 
+
   )
 }
 

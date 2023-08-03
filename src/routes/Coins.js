@@ -44,8 +44,8 @@ const Coins = () => {
   }
 
   const navigate= useNavigate();
-  const coindetailHandle=(id)=>{
-      navigate(`/coins/${id}`);
+  const coindetailHandle=(symbol)=>{
+      navigate(`/coins/${symbol}`);
   }
 
   const prevPageHandle = ()=>{
@@ -92,6 +92,7 @@ const Coins = () => {
             <div>{selectCoin.name} </div>
             <div>{selectCoin.symbol} </div>
             <div>{selectCoin.circulating_supply} </div>
+            {/* <div><ChartCompe /> </div> */}
             <div>{selectCoin.total_supply} </div>
         </div>
       }
@@ -108,6 +109,8 @@ const Coins = () => {
           <td>symbol  </td>
           <td>circulating_supply  </td>
           <td>total_supply  </td>
+          {/* <td>charts  </td> */}
+          <td>자세히보기  </td>
       </tr>
       {
         currentCoins && currentCoins.map(coin=>(
@@ -118,7 +121,8 @@ const Coins = () => {
                 <td>{coin.symbol} </td>
                 <td>{coin.circulating_supply} </td>
                 <td>{coin.total_supply} </td>
-                <td> <button onClick={ ()=>coindetailHandle(coin.id)}>자세히보기</button>  </td>
+                {/* <td><ChartCompe /> </td> */}
+                <td> <button onClick={ ()=>coindetailHandle(coin.symbol)}>자세히보기</button>  </td>
             </tr>
         ))
       }
