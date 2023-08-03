@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './Motions11.css'
+import './Motions10.css'
 import { motion, useScroll } from 'framer-motion'
 import img from '../assets/4607564680502824585.jpg'
  
@@ -9,32 +9,12 @@ export const Motions = () => {
 
   return (
     <>
-      <div className='scroll_trigger'>
-        <motion.div  className='scroll_box'
-                      initial={{ opacity:0, scale:0 }}
-                      whileInView={{ opacity:1, scale:1 }}
-        />
-      </div>
-      <div className='scroll_trigger'>
-        <motion.div  className='scroll_box'
-                   initial={{ opacity:0, scale:0 }}
-                   whileInView={{ opacity:1, scale:1 }}
-                   viewport={{once:true}}
-        />
-      </div>
-      <div className='scroll_trigger'>
-        <motion.div  className='scroll_box'
-                initial={{ opacity:0, scale:0 }}
-                whileInView={{ opacity:1, scale:1 }}
-                viewport={{ amount:0.2, once:true }}
-        />
-      </div>
-      <div className='scroll_trigger'>
-        <motion.div  className='scroll_box'
-               initial={{ opacity:0, scale:0 }}
-               whileInView={{ opacity:1, scale:1 }}
-        />
-      </div>
+      <motion.nav
+           style={{ scaleX: scrollYProgress }}
+          className='scroll_bar'
+      >
+      </motion.nav>
+      <LoremIpsum />
     </>
   )
 }
