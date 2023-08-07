@@ -1,9 +1,16 @@
 .main{
     height: 1000px;
+    
 }
 .main:nth-child(2n){
     background-color: pink;
 }
 .main:nth-child(2n+1){
     background-color: skyblue;
+}
+
+.main>div{
+    width: 70%;
+    margin:auto;
+    padding-top: 170px;
 }

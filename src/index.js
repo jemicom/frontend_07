@@ -11,6 +11,7 @@ import { DataProvider } from './contexts/DataContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* <App /> */}
       <BrowserRouter>
         <ThemeContextProvider>
           <AuthContextProvider>

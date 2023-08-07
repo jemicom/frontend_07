@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 import { ThemeContext } from '../contexts/ThemeContext'
+import { BsFillMoonFill,  BsMoon} from "react-icons/bs";
 
 const  navs = [ "main" , "coins" ,  "posts", "about" , "contact", "login"];
 const NavBar = () => {
@@ -19,13 +20,17 @@ const NavBar = () => {
       </ul>
 
       <div  className='darkmodeBtn'>
-            <button 
+            <span  
                 onClick={()=>setDarkMode(!darkmode)}
                 className={ darkmode ? "darkmode" : ""}
-                style={{ border : darkmode ? `1px solid white` : `1px solid black`}}
+                style={{ 
+                  // border : darkmode ? `1px solid white` : `1px solid black`
+                  cursor : 'pointer'
+                }}
             >
-              {!darkmode ? "dark":"normal"}
-            </button>
+              {/* {!darkmode ? "dark":"normal"} */}
+              {!darkmode ? <BsMoon />:<BsFillMoonFill />}
+            </span>
       </div>
     </nav>
   )

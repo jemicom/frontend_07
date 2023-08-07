@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './CoinDetail.css'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import TopPaddingLayout from '../layouts/TopPaddingLayout'
 
 import {
   LineChart,
@@ -59,7 +60,7 @@ const CoinDetail = () => {
   }, [])
 
   return (
-    <div>
+    <div className='coindetail-container'>
 {/* 모바일이라면 gotoback */}
         <h1>CoinDetail  {symbol}</h1>
 
@@ -98,4 +99,5 @@ const CoinDetail = () => {
   )
 }
 
-export default CoinDetail
+// export default CoinDetail
+export default TopPaddingLayout(CoinDetail)

@@ -2,17 +2,20 @@ import React, { useContext } from 'react'
 import './Header.css'
 import { ThemeContext } from '../contexts/ThemeContext'
 import Logo from './Logo'
+import NavBar from './NavBar'
 
 const Header = () => {
   const { darkmode } = useContext(ThemeContext);
 
   return (
-    <header
-        className={ darkmode ? "darkmode" : ""}
-    >
-        <Logo />
-        {/* Nav 대신 Sns  */}
-    </header>
+    <div className='header-container'>
+      <header
+          className={ darkmode ? "darkmode" : ""}
+      >
+          <Logo />
+          <NavBar />
+      </header>
+    </div>
   )
 }
 

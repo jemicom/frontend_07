@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import './Login.css'
 import { BsFillEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import TopPaddingLayout from '../layouts/TopPaddingLayout'
 
 // 기본
 const Login = ({user, setUser}) => {
@@ -58,4 +59,5 @@ const Login = ({user, setUser}) => {
   )
 }
 
-export default Login
+// export default Login
+export default TopPaddingLayout(Login)

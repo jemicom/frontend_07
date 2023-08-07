@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import './Main.css'
 // 세로로 긴 페이지 : fullpage
+import TopPaddingLayout from '../layouts/TopPaddingLayout'
+
+
 import {
   Main01,
   Main02,
@@ -23,4 +26,5 @@ const Main = () => {
   )
 }
 
-export default Main
+// export default Main
+export default TopPaddingLayout(Main)

@@ -33,7 +33,6 @@ const App = () => {
   return (
     <>
       <Header />
-      <NavBar />
       <Routes>
           <Route path="/"  element={<Main />} />
           <Route path="/main"  element={<Main />} />

@@ -1,0 +1,9 @@
+.coindetail-container{
+    width:500px; 
+    margin:100px  auto;
+}
+
+.coindetail-container h1{ 
+    text-align: center;
+    margin-bottom: 30px ;
+}

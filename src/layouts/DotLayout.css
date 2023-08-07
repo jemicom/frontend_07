@@ -1,13 +1,20 @@
 .dots{
     position: fixed;
-    right:0; 
+    right:30px; 
     z-index: 999;
     font-size: 0;
+    height: 100vh;
 }
 
 .dots ul{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 50%;
+}
+
+.dots ul li{
+    margin:0;
 }
 
 .dots a{

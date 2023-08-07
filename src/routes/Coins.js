@@ -3,6 +3,7 @@ import './Coins.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Pagination from '../components/Pagination'
+import TopPaddingLayout from '../layouts/TopPaddingLayout'
 
 const API= `https://api.coinpaprika.com/v1/tickers`
 
@@ -139,4 +140,5 @@ const Coins = () => {
   )
 }
 
-export default Coins
+// export default Coins
+export default TopPaddingLayout(Coins)
