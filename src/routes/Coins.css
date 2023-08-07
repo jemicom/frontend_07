@@ -1,11 +1,17 @@
 .coins-container{
-    width:1200px; 
+    width:1000px; 
     margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
+.coins-container .selectBtn{ 
+    width: 200px;
+    padding: 3px;
+}
 .coins-container .coins-select{
-    margin-bottom: 50px;
-    border:1px solid white; 
+    margin-bottom: 50px;  
 }
 
 .coins-container .coins-select.active{
@@ -15,6 +21,7 @@
 
 .coins-container table{
     border-collapse: collapse;
+    margin-bottom: 50px;
 }
 
 .coins-container td{

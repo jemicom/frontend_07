@@ -26,12 +26,14 @@ import PostLayout from './layouts/PostLayout'
 
 import Charts from './charts/Charts';
 import Motions from './motions/Motions'
+import LoadPage from './components/LoadPage'
 
 const App = () => {
   const { user }= useContext(AuthContext);
   
   return (
     <>
+      <LoadPage />
       <Header />
       <Routes>
           <Route path="/"  element={<Main />} />
@@ -56,6 +58,7 @@ const App = () => {
           <Route path="/*"  element={<NotFound />} />
       </Routes>
       <Footer />
+      
     </>
   )
 }

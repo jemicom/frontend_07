@@ -1,6 +1,6 @@
-li{
+.posts-container li{
     margin-bottom:50px;
 }
-li>*{
+.posts-container li>*{
     display: block; 
 }

@@ -1,7 +1,15 @@
+.pagination-container,
 .pagination{
     display: flex;
-    gap:5px;
+    gap:5px; 
 }
+
+.pagination-container{
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .pagination li{ 
     width: 20px; 
@@ -10,4 +18,9 @@
     border-radius: 5px;
     text-align: center;
     line-height: 20px;
+    margin-bottom: 0; 
+}
+.pagination li.active{
+    background-color: black;
+    color:white; 
 }

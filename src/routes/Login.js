@@ -33,27 +33,33 @@ const Login = ({user, setUser}) => {
       <form className='login-content'
             onSubmit={ (e)=>e.preventDefault()}
       >
-          <input  type="text" 
-                  placeholder='아이디'
-                  autoFocus
-                  id="user_id"
-                  ref={useridRef}
-          />
-          <input  type={ !pwShow ? "password" : "text"}
-                  placeholder='비밀번호'
-                  
-                  id="user_pw"
-                  ref={ userpwRef }
-          />
-          <div role="button" className='button'
-               onClick={()=>setPwShow(!pwShow)}
-          >
-          {
-            pwShow ? <BsFillEyeFill /> : <BsEyeSlashFill />
-          }
+          <div>
+              <input  type="text" 
+                      placeholder='아이디'
+                      autoFocus
+                      id="user_id"
+                      ref={useridRef}
+              />
           </div>
-          
-          <button onClick={ loginHandle }>로그인</button>
+          <div>
+            <input  type={ !pwShow ? "password" : "text"}
+                    placeholder='비밀번호'
+                    
+                    id="user_pw"
+                    ref={ userpwRef }
+            />
+            <label role="button" className='button'
+                onClick={()=>setPwShow(!pwShow)}
+                htmlFor='user_pw'
+            >
+            {
+              pwShow ? <BsFillEyeFill /> : <BsEyeSlashFill />
+            }
+            </label>
+          </div>
+          <div>
+              <button onClick={ loginHandle }>로그인</button>
+          </div>
       </form>
     </div>
   )

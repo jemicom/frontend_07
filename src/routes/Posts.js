@@ -3,6 +3,7 @@ import './Posts.css'
 import { Link }  from 'react-router-dom'
 import { useContext } from 'react'
 import { DataContext} from '../contexts/DataContext';
+import TopPaddingLayout from '../layouts/TopPaddingLayout'
 
 const Posts = () => {
   const  {
@@ -12,7 +13,7 @@ const Posts = () => {
   } = useContext(DataContext)
 
   return (
-    <div>
+    <div className='posts-container'>
       {
         isPostsLoading ?  <div>Loading...</div> 
         : <form  onSubmit={ e=>e.preventDefault() }>
@@ -44,4 +45,5 @@ const Posts = () => {
   )
 }
 
-export default Posts
+// export default Posts
+export default TopPaddingLayout(Posts)

@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { DataContext} from '../contexts/DataContext';
 import { format } from 'date-fns'
-
+import TopPaddingLayout from '../layouts/TopPaddingLayout'
 
 const PostDetail = () => {
   const {
@@ -86,4 +86,5 @@ const PostDetail = () => {
   )
 }
 
-export default PostDetail
+// export default PostDetail
+export default TopPaddingLayout(PostDetail)

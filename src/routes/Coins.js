@@ -76,7 +76,9 @@ const Coins = () => {
       } */}
 
       {
-         isCoinsLoading  ||  <select onChange={(e)=>selectHandle(e)}>
+         isCoinsLoading  ||  <select onChange={(e)=>selectHandle(e)}
+                    className='selectBtn'
+         >
                <option>코인을 선택하세요.</option>
           {
               coins.map(coin=>(
@@ -87,7 +89,7 @@ const Coins = () => {
       }
 
       {
-        selectCoin && <div  className={selectCoin ? 'coins-select active' : 'coins-select'}>
+        selectCoin && <div  className={selectCoin ? 'coins-select' : 'coins-select  active'}>
             <div>{selectCoin.rank} </div>
             <div>{selectCoin.id} </div>
             <div>{selectCoin.name} </div>

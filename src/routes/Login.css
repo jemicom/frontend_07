@@ -1,7 +1,32 @@
-input{
+.login-container{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content input{
     display: block;
     width: 200px;
     padding: 5px 10px; 
     margin-bottom: 5px;
 }
 
+.login-container button{
+    width:100%;
+    padding: 3px 0;
+}
+
+.login-content>div{
+    width: 230px; 
+}
+.login-content>div:nth-child(2){
+    display: flex;
+}
+.login-content>div:nth-child(2)>input{
+    flex-shrink: 0;
+}
+.login-content>div:nth-child(2)>label{
+    display: block;
+    padding: 5px;
+}

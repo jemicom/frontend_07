@@ -1,0 +1,21 @@
+#footer{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer>ul{
+    /* display: flex;
+    flex-direction: column; */
+    width: 200px;
+}
+
+#footer li{
+    margin: 0;
+    /* post 겹침현상 발생  */
+}
+
+#footer a{
+    display: block;
+    padding: 5px 10px;
+}
